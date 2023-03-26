@@ -1,5 +1,7 @@
 # Zadanie I
 
+## Wersja w repozytorium: 5.0
+
 Należy stworzyć obraz Dockerowy na bazie debianowej dystrybuji (bez
 zainstalowanych paczek javy, kotlina, itp.), który spełnia poniższe
 wytyczne.
