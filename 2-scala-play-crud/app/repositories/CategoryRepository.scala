@@ -2,7 +2,7 @@ package repositories
 
 import models.Category
 
-import javax.inject.Inject
+import javax.inject.{Inject, Singleton}
 import scala.collection.mutable.ListBuffer
 
 @Singleton

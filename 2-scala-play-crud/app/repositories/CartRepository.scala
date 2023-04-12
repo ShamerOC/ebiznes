@@ -2,9 +2,11 @@ package repositories
 
 import models.Cart
 
+import javax.inject.{Inject, Singleton}
 import scala.collection.mutable.ListBuffer
 
-class CartRepository {
+@Singleton
+class CartRepository @Inject()() {
 
   private val carts = new ListBuffer[Cart]()
 

@@ -5,7 +5,7 @@ import play.api.libs.json._
 import models.Category
 import repositories.CategoryRepository
 
-import javax.inject.Inject
+import javax.inject.{Inject, Singleton}
 
 @Singleton
 class CategoryController @Inject()(cc: ControllerComponents, categoryRepository: CategoryRepository)
