@@ -1,5 +1,7 @@
 # Zadanie II
 
+## Wersja w repozytorium: 4.5
+
 Należy stworzyć aplikację na frameworku Play w Scali 2, która będzie
 miała zaimplementowane 3 kontrolery CRUD (w sumie 15 endpointów).
 Kontrolery mogą bazować na listach zamiast baz danych. CRUD: show all,
