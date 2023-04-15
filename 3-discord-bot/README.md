@@ -1,5 +1,7 @@
 # Zadanie III
 
+## Wersja w repozytorium: 4.5
+
 Należy stworzyć aplikację w Kotlinie na frameworku Ktor, która
 wykorzysta jedną z platform: Messenger, Slack, Discord, Webex, Skype i
 obsłuży żądania klientów dotyczące listy kategorii oraz listy
