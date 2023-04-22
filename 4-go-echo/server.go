@@ -10,7 +10,7 @@ func main() {
 	e := echo.New()
 
 	db, _ := gorm.Open(sqlite.Open("gorm.db"), &gorm.Config{})
-	err := db.AutoMigrate(&Product{}, &Cart{})
+	err := db.AutoMigrate(&Product{}, &Cart{}, &Category{})
 
 	if err != nil {
 		return
