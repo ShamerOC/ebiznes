@@ -44,7 +44,7 @@ const useCart = (): Cart => {
         setCartItems([]);
     };
 
-    const itemCount = cartItems.reduce((count, item) => count + 1, 0);
+    const itemCount = cartItems.reduce((count, _) => count + 1, 0);
 
     const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
