@@ -1,6 +1,6 @@
 # Zadanie V
 
-## Wersja w repozytorium: 
+## Wersja w repozytorium: 4.0
 
 Należy stworzyć aplikację kliencką wykorzystując bibliotekę React.js.
 W ramach projektu należy stworzyć trzy komponenty: Produkty, Koszyk
