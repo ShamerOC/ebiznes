@@ -19,3 +19,8 @@ aplikacji serwerowej)
 w kodzie w Sonarze (kod aplikacji serwerowej)  
 5.0 Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie
 aplikacji klienckiej
+
+https://golangci-lint.run/
+https://github.com/pinterest/ktlint
+https://scalameta.org/scalafmt/docs/installation.html
+
