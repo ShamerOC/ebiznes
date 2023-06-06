@@ -1,6 +1,6 @@
 # Zadanie VII
 
-## Wersja w repozytorium:
+## Wersja w repozytorium: 5.0
 
 Należy dodać projekt aplikacji klienckiej oraz serwerowej (jeden
 branch, dwa repozytoria) do Sonara w wersji chmurowej
