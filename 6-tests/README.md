@@ -1,6 +1,6 @@
 # Zadanie VI
 
-## Wersja w repozytorium:
+## Wersja w repozytorium: 3.0
 
 3.0 Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium
 (Kotlin, Python, Java, JS, Go, Scala)  
