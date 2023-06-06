@@ -24,7 +24,7 @@ function Products(cart: Cart) {
     return (
         <div>
             <h1>Lista produktów:</h1>
-    <ul>
+    <ul className='products'>
     {products.map(product => (
             <li key={product.id}>
                 <h2>{product.name}</h2>
