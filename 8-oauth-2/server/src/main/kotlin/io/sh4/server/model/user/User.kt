@@ -4,7 +4,6 @@ import io.sh4.server.model.authentication.Role
 import io.sh4.server.model.authentication.Token
 import jakarta.persistence.*
 import lombok.*
-import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
@@ -30,34 +29,28 @@ class User(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
+
 ) : UserDetails {
 
-    override fun getAuthorities(): Collection<GrantedAuthority?> {
-        return setOf(SimpleGrantedAuthority(role.name))
-    }
+    override fun getAuthorities() =
+        setOf(SimpleGrantedAuthority(role.name))
 
-    override fun getPassword(): String {
-        return password
-    }
+    override fun getPassword() =
+        password
 
-    override fun getUsername(): String {
-        return email
-    }
+    override fun getUsername() =
+        email
 
-    override fun isAccountNonExpired(): Boolean {
-        return true
-    }
+    override fun isAccountNonExpired() =
+        true
 
-    override fun isAccountNonLocked(): Boolean {
-        return true
-    }
+    override fun isAccountNonLocked() =
+        true
 
-    override fun isCredentialsNonExpired(): Boolean {
-        return true
-    }
+    override fun isCredentialsNonExpired() =
+        true
 
-    override fun isEnabled(): Boolean {
-        return true
-    }
+    override fun isEnabled() =
+        true
 }
 

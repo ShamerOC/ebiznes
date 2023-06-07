@@ -15,24 +15,21 @@ import java.util.function.Function
 
 @Service
 class JwtService {
-    fun extractUsername(token: String?): String {
-        return extractClaim(token) { obj: Claims -> obj.subject }
-    }
+    fun extractUsername(token: String?): String =
+        extractClaim(token) { obj: Claims -> obj.subject }
 
-    fun <T> extractClaim(token: String?, claimsResolver: Function<Claims, T>): T {
-        val claims = extractAllClaims(token)
-        return claimsResolver.apply(claims)
-    }
+    fun <T> extractClaim(token: String?, claimsResolver: Function<Claims, T>): T =
+        claimsResolver.apply(extractAllClaims(token))
 
-    fun generateToken(user: User): String {
-        return generateToken(user, mapOf(ROLE to user.role))
-    }
+
+    fun generateToken(user: User): String =
+        generateToken(user, mapOf(ROLE to user.role))
 
     fun generateToken(
         userDetails: UserDetails,
         extraClaims: Map<String, Any>
-    ): String {
-        return Jwts
+    ): String =
+        Jwts
             .builder()
             .setClaims(extraClaims)
             .setSubject(userDetails.username)
@@ -40,34 +37,27 @@ class JwtService {
             .setExpiration(Date(System.currentTimeMillis() + 1000 * 60 * 24))
             .signWith(signInKey, SignatureAlgorithm.HS256)
             .compact()
-    }
 
-    fun isTokenValid(token: String): Boolean {
-        return !isTokenExpired(token)
-    }
+    fun isTokenValid(token: String): Boolean =
+        !isTokenExpired(token)
 
-    private fun isTokenExpired(token: String): Boolean {
-        return extractExpiration(token).before(Date())
-    }
+    private fun isTokenExpired(token: String): Boolean =
+        extractExpiration(token).before(Date())
 
-    private fun extractExpiration(token: String): Date {
-        return extractClaim(token) { obj: Claims -> obj.expiration }
-    }
+    private fun extractExpiration(token: String): Date =
+        extractClaim(token) { obj: Claims -> obj.expiration }
 
-    private fun extractAllClaims(token: String?): Claims {
-        return Jwts
+    private fun extractAllClaims(token: String?): Claims =
+        Jwts
             .parserBuilder()
             .setSigningKey(signInKey)
             .build()
             .parseClaimsJws(token)
             .body
-    }
 
     private val signInKey: Key
-        private get() {
-            val keyBytes = Decoders.BASE64.decode(SECRET_KEY)
-            return Keys.hmacShaKeyFor(keyBytes)
-        }
+        get() = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET_KEY))
+
 
     companion object {
         const val ROLE = "role"

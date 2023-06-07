@@ -18,6 +18,7 @@ import org.springframework.security.web.authentication.logout.LogoutHandler
 import org.springframework.web.cors.CorsConfiguration
 import org.springframework.web.cors.CorsConfigurationSource
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource
+import org.springframework.web.filter.CorsFilter
 
 
 @Configuration
@@ -33,8 +34,6 @@ class SpringSecurityConfiguration(
     @Throws(Exception::class)
     fun securityFilterChain(http: HttpSecurity): SecurityFilterChain {
         http
-            .cors()
-            .and()
             .csrf()
             .disable()
             .authorizeHttpRequests()
