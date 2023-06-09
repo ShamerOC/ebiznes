@@ -33,11 +33,7 @@ class MyServer(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     webServer = HTTPServer((hostName, serverPort), MyServer)
     print("Server started http://%s:%s" % (hostName, serverPort))
-    openai.api_key = "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"
-    # openai.ChatCompletion.create(
-        # model="gpt-3.5-turbo",
-        # api_key="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"
-    # )
+    openai.api_key = "xxx"
     try:
         webServer.serve_forever()
     except KeyboardInterrupt:
