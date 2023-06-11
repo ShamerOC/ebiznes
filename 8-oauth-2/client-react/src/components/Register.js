@@ -13,7 +13,7 @@ const Register = () => {
         // Perform registration logic here (e.g., send data to backend)
         console.log('Register:', firstName, password);
 
-        axios.post('http://localhost:8080/api/v1/auth/register', {
+        axios.post('http://35.158.93.93:8080/api/v1/auth/register', {
             "firstName": firstName,
             "lastName": lastName,
             "email": email,

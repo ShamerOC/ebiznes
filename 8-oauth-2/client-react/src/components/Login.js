@@ -11,7 +11,7 @@ const Login = () => {
         // Perform login logic here (e.g., send data to backend)
         console.log('Login:', email, password);
 
-        axios.post('http://localhost:8080/api/v1/auth/authenticate', {
+        axios.post('http://35.158.93.93:8080/api/v1/auth/authenticate', {
             "email": email,
             "password": password
         })

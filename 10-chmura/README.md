@@ -1,6 +1,15 @@
 # Zadanie X
 
-## Wersja w repozytorium: 
+## Wersja w repozytorium: 3.0
+
+## Opis Rozwiązania
+
+Adres strony: http://35.158.93.93/  
+
+Postawione na EC2 w `AWS`.  
+Docker image z zadania `8-oauth-2` trzymane w `ECR`. 
+
+## Opis Zadania
 
 Należy wykorzystać GitHub Actions (dopuszczalne są inne rozwiązania
 CI) oraz chmurę Azure (dopuszczalne inne chmury), aby zbudować oraz
@@ -9,7 +18,7 @@ jako osobne dwie aplikacje. Należy do tego wykorzystać obrazy
 dockerowe, a aplikacje powinny działać na kontenerach. Dopuszczalne
 jest zbudowanie wcześniej aplikacji (jar package) oraz budowanie
 aplikacji via Github Actions. Należy zwrócić uwagę na zasoby dostępne
-na chmurze.
+na chmurze.  
 
 3.0 Należy stworzyć odpowiednie instancje po stronie chmury na
 dockerze  
